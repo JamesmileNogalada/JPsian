@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Favorite</title>
+  <link rel="stylesheet" href="james.css">
+</head>
+<body>
+  <svg height="130" width="500">
+    <defs>
+      <linearGradient id="grad1">
+        <stop offset="0%" stop-color="yellow" />
+        <stop offset="100%" stop-color="red" />
+      </linearGradient>
+    </defs>
+    <ellipse cx="250" cy="70" rx="185" ry="55" fill="url(#grad1)" />
+    <text fill="#ffffff" font-size="40" font-family="Verdana" x="250" y="85" text-anchor="middle">AnimeWorld</text>
+  </svg>
+
+  <nav class="navbar">
+    <div class="navbar-container">
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><button class="btn1" onclick="toggleForm()">Sign Up</button></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <h1>Welcome to Anime World</h1>
+    <p>Your favorite anime awaits!</p>
+  </header>
+
+  <div class="container">
+    <div class="picture-container">
+      <img src="Onepiece.jpg" alt="Onepiece" width="300">
+      <p>One Piece is a Japanese manga series written and illustrated by Eiichiro Oda.
+        <br>It has been serialized in Shueisha's shōnen manga magazine Weekly Shōnen Jump since July 1997, with its chapters compiled 
+        <br>in 110 tankōbon volumes as of November 2024.</p>
+    </div>
+    
+    <div class="picture-container">
+      <img src="Haikyuu.jpg" alt="Haikyuu" width="300">
+      <p>Haikyu!! is a Japanese manga series written and illustrated by Haruichi Furudate.
+        <br>It was serialized in Shueisha's shōnen manga magazine Weekly Shōnen Jump from February 2012 to July 2020, 
+        <br>with its chapters collected in 45 tankōbon volumes.</p>
+    </div>
+    
+    <div class="picture-container">
+      <img src="Blue Lock.jpg" alt="Blue Lock" width="300">
+      <p>Blue Lock is a Japanese manga series written by Muneyuki Kaneshiro and illustrated by Yusuke Nomura. 
+        <br>It has been serialized in Kodansha's Weekly Shōnen Magazine since August 2018, with its chapters 
+        <br>collected in 31 tankōbon volumes as of October 2024.</p>
+    </div>
+    
+    <div class="picture-container">
+      <img src="Demon Slayer.jpg" alt="Demon Slayer" width="300">
+      <p>Demon Slayer: Kimetsu no Yaiba is a Japanese manga series written and illustrated by Koyoharu Gotouge.
+        <br> It was serialized in Shueisha's shōnen manga magazine Weekly Shōnen Jump from February 2016 to May 2020,
+        <br> with its chapters collected in 23 tankōbon volumes.</p>
+    </div>
+    
+    <div class="picture-container">
+      <img src="Solo Leveling.jpg" alt="Solo Leveling" width="300">
+      <p>Solo Leveling, also alternatively translated as Only I Level Up, is a South Korean portal fantasy web novel written by Chugong. 
+        <br>It was serialized in Kakao's digital comic and fiction platform KakaoPage beginning on July 25, 2016, and was later published by 
+        <br>D&C Media under their Papyrus label since November 4, 2016. </p>
+    </div>
+  </div>
+
+  <div class="loginForm" id="loginForm">
+    <h1>Sign Up</h1>
+    <form>
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button type="submit" class="btn1">Sign Up</button>
+    </form>
+  </div>
+
+  <script>
+    function toggleForm() {
+      const form = document.getElementById('loginForm');
+      const isVisible = form.style.display === 'block';
+      form.style.display = isVisible ? 'none' : 'block';
+    }
+  </script>
+
+</body>
+</html>
