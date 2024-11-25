@@ -1,32 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="UTF-8">
-<meta charset="viewpoint" content="width=device-width, initial-scale=1">
-<title>Login Form</title>
-<link rel="icon" type="image/x-icon" href="V.png">
-<link rel="stylesheet" href="signup.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login Form</title>
+  <link rel="icon" type="image/x-icon" href="V.png">
+  <link rel="stylesheet" href="signup.css">
+  <script>
+    function validateLogin(event) {
+      event.preventDefault();
+
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+
+      if (username === "1111" && password === "1111") {
+        window.location.href = "jamess.html";
+      } else {
+        alert("Wrong Password, please try again.");
+      }
+    }
+
+    window.onload = function() {
+      document.getElementById('loginForm').onsubmit = validateLogin;
+    }
+  </script>
 </head>
 <body>
-</body>
-<body>
-    <div class="login">
-    <form onsubmit="return validateLogin()">
-        <h1>Login Form</h1>
-        <div class="box1">
-          <input type="text" id="username" placeholder="Username" required>
-        </div>
-        <div class="box2">
-          <input type="password" id="password" placeholder="Password" required>
-        </div>
-        <div class="remember-forgot">
-          <label><input type="checkbox"> Remember me </label>
-          <a href="#">Forgot password</a>
-        </div>
-        <button type="submit" class="btn">Login</button>
-        <div class="register-link">
-        </div>
-      </form>
+  <div class="half">
+    <img src="anime.jpg" alt="anime">
+  </div>
+  
+  <div class="login">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <input class="box1" type="text" id="username" placeholder="Enter your username" required>
+      <input class="box2" type="password" id="password" placeholder="Enter your password" required>
+      <button class="btn" type="submit">Login</button>
+    </form>
+    <div class="link">
+      <a href="#">Forgot Password?</a>
     </div>
-  </body>
-  </html>
+  </div>
+</body>
+</html>
