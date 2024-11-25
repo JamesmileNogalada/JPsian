@@ -1,0 +1,108 @@
+/* Reset some default styles for cleaner rendering */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('background.jpg'); /* Optional background image */
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .half {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+  .half img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .login {
+    width: 350px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+  }
+  
+  .login h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .box1, .box2 {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .box1:focus, .box2:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  .btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .link {
+    margin-top: 10px;
+  }
+  
+  .link a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 14px;
+  }
+  
+  .link a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .half {
+      display: none;
+    }
+  
+    .login {
+      width: 80%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+  }
+  
